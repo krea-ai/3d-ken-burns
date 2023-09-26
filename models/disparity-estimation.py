@@ -1,3 +1,7 @@
+##########################################################
+import sys
+
+sys.path.append("3d-ken-burns")
 class Basic(torch.nn.Module):
 	def __init__(self, strType, intChannels):
 		super().__init__()

@@ -1,3 +1,10 @@
+##########################################################
+import os
+import sys
+
+lib_path='3d-ken-burns'
+sys.path.append(lib_path)
+
 def process_load(npyImage, objSettings):
 	objCommon['fltFocal'] = 1024 / 2.0
 	objCommon['fltBaseline'] = 40.0
@@ -201,7 +208,7 @@ def process_kenburns(objSettings):
 ##########################################################
 
 def preprocess_kernel(strKernel, objVariables):
-	with open('./common.cuda', 'r') as objFile:
+	with open(os.path.join(lib_path, 'common.cuda'), 'r') as objFile:
 		strKernel = objFile.read() + strKernel
 	# end
 

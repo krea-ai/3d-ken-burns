@@ -1,3 +1,7 @@
+##########################################################
+import sys
+
+sys.path.append("3d-ken-burns")
 netMaskrcnn = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=True).cuda().eval()
 
 def disparity_adjustment(tenImage, tenDisparity):
